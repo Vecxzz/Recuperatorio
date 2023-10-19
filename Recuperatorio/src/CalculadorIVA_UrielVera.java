@@ -19,10 +19,6 @@ public class CalculadorIVA_UrielVera {
         iva = iva/100;
 
         double precioFinal = (precioProd + (precioProd * iva));
-        double sumaIva = (precioProd + precioFinal);
-        double restaIva = (precioProd - precioFinal);
-        double multiplicacionIva = (precioProd * precioFinal);
-        double divisionIva = (precioProd / precioFinal);
 
         System.out.println("Inicando calculadora");
         //Bucle menú
@@ -39,28 +35,28 @@ public class CalculadorIVA_UrielVera {
             switch (operacion){
                 case 1:
                     System.out.println("Has seleccionado Suma");
-                    resultado = (precioProd + sumaIva);
+                    resultado = (precioProd + precioFinal);
                     System.out.println("El resultado es " + resultado);
                     break;
 
                 case 2:
                     System.out.println("Has seleccionado Resta");
-                    resultado = (precioProd - restaIva);
+                    resultado = (precioProd - precioFinal);
                     System.out.println("El resultado es " + resultado);
                     break;
 
                 case 3:
                     System.out.println("Has seleccionado Multiplicación");
-                    resultado = (precioProd * multiplicacionIva);
+                    resultado = (precioProd * precioFinal);
                     System.out.println("El resultado es " + resultado);
                     break;
 
                 case 4:
                     System.out.println("Has seleccionado División");
-                    resultado = (precioProd / divisionIva);
+                    resultado = (precioProd / precioFinal);
 
                     //Si se intenta dividir por 0
-                    if (divisionIva == 0){
+                    if (precioFinal == 0){
                         System.out.print("No es posible dividir por 0");
                         continue;
                     }else {
